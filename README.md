@@ -1,2 +1,2 @@
 # enigmaVica
-BelajarGolang
+Belajar Go dari dasar
