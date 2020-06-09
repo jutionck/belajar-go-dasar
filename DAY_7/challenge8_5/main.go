@@ -26,7 +26,6 @@ type mahasiswa struct {
 }
 
 var mahasiswaListAll = []mahasiswa{}
-var path = "/Users/jutioncandrakirana/Documents/GitHub/enigmaVica/DAY_7/temp/temp.txt"
 
 func clearScreen() {
 	osRunning := runtime.GOOS
