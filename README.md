@@ -1,2 +1,5 @@
-# enigmaVica
-Belajar Go dari dasar
+# Golang Fundamental
+
+Golang, atau Go adalah bahasa pemrograman yang lahir di tahun 2009. Golang memiliki banyak kelebihan, terbukti dengan banyaknya perusahaan besar yang menggunakan bahasa ini dalam pengembangan produk-produk mereka, hingga level production tentunya.
+
+Materi yang diberikan:
