@@ -1,26 +1,23 @@
 // Shooping Time
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func main() {
-	var barang = []int{15000, 12000, 5000, 3000, 10000}
-	var saldo = 30000
+	var barang = []int{1500000, 500000, 250000, 175000, 50000}
+	var saldo = 700000
 	HowManyGifts(saldo, barang)
 }
 
 func HowManyGifts(saldo int, barang []int) {
-	for i := 0; i < len(barang)-1; i++ {
-		for j := i + 1; j < len(barang); j++ {
-			// urut manual
-			if barang[i] > barang[j] {
-				sementara := barang[i]
-				barang[i] = barang[j]
-				barang[j] = sementara
-				fmt.Println(barang[i], barang[j])
-			}
-		}
-	}
+	// pengurutan barang dari mahal
+	sort.Slice(barang, func(i, j int) bool {
+		return barang[i] > barang[j]
+	})
+
 	jumlahbeli := 0 //isi nilai awal 0
 	for k := 0; k <= len(barang)-1; k++ {
 		if barang[k] <= saldo {
@@ -28,6 +25,8 @@ func HowManyGifts(saldo int, barang []int) {
 			jumlahbeli++       //akan terus bertambah 1 sampai budgetnya abis
 		}
 	}
+	// Sisa saldo
+	fmt.Println(saldo)
 	fmt.Println(jumlahbeli, "Barang")
 
 }
