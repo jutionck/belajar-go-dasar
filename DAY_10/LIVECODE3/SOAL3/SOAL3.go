@@ -39,13 +39,13 @@ func main() {
 	sort.Slice(values, func(i, j int) bool {
 		return values[i] > values[j]
 	})
-	jumlahbeli := 0 //isi nilai awal 0
+	// jumlahbeli := 0 //isi nilai awal 0
 	saldo := 700000
 	var barangBeli []string
 	for k := 0; k <= len(barangSale)-1; k++ {
 		if values[k] <= saldo {
-			saldo -= values[k] //ex : 10000 = 10000 - gift yang index of nya dari loop k
-			jumlahbeli++       //akan terus bertambah 1 sampai budgetnya abis
+			saldo -= values[k]
+			// jumlahbeli++ //akan terus bertambah 1 sampai budgetnya abis
 			barangBeli = append(barangBeli, keys[k])
 		}
 	}
